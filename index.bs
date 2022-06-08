@@ -1478,6 +1478,8 @@ of running the following steps:
 1. [=Assert=]: |reportingOrigin| is not an [=opaque origin=].
 1. Let |sharedInfo| be a [=map=] of the following key/value pairs:
 
+    : "`api`"
+    :: "`attribution-reporting`"
     : "`attribution destination`"
     :: |report|'s [=aggregatable report/attribution destination=], <a href="https://html.spec.whatwg.org/multipage/origin.html#serialization-of-a-site">serialized</a>
     : "`report_id`"
@@ -1547,7 +1549,7 @@ run the following steps:
     : "`payload`"
     :: |encryptedPayload|, [=forgiving-base64 encode|base64 encoded=]
     : "`key_id`"
-    :: A [=string=], |pkR|'s identifier
+    :: A [=string=] identifying |pkR|
 
 1. If |report|'s [=aggregatable report/debug mode=] is <strong>enabled</strong>,
     set |aggregationServicePayload|["`debug_cleartext_payload`"] to |report|'s
