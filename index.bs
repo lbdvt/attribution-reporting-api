@@ -1506,7 +1506,7 @@ might independently pick a key uniformly at random for every encryption operatio
 An [=aggregatable report=] |report|'s <dfn for="aggregatable report">plaintext payload</dfn>
 is the result of running the following steps:
 
-1. Let |payloadData| be an [=list/is empty|empty=] [=list=].
+1. Let |payloadData| be a new [=list/is empty|empty=] [=list=].
 1. [=list/iterate|For each=] |contribution| of |report|'s [=aggregatable report/contributions=]:
     1. Let |contributionData| be a [=map=] of the following key/value pairs:
 
@@ -1522,6 +1522,7 @@ is the result of running the following steps:
     :: "`histogram`"
     : "`data`"
     :: |payloadData|
+
 1. Return the [=byte sequence=] resulting from [[!RFC8949|CBOR encoding]] |payload|.
 
 To <dfn>obtain the encrypted payload</dfn> given an [=aggregatable report=] |report| and
@@ -1540,7 +1541,7 @@ run the following steps:
 
 1. Let |pkR| be the result of running [=obtain the public key for encryption=].
 1. Let |encryptedPayload| be the result of running [=obtain the encrypted payload=] with |report| and |pkR|.
-1. Let |aggregationServicePayloads| be a [=list=].
+1. Let |aggregationServicePayloads| be a new [=list/is empty|empty=] [=list=].
 1. Let |aggregationServicePayload| be a [=map=] of the following key/value pairs:
 
     : "`payload`"
