@@ -1482,7 +1482,7 @@ of running the following steps:
     :: |report|'s [=aggregatable report/attribution destination=], <a href="https://html.spec.whatwg.org/multipage/origin.html#serialization-of-a-site">serialized</a>
     : "`report_id`"
     :: |report|'s [=aggregatable report/report ID=]
-    : "`reporting origin`"
+    : "`reporting_origin`"
     :: |reportingOrigin|, [=serialization of an origin|serialized=]
     : "`scheduled_report_time`"
     :: |report|'s [=aggregatable report/original report time=] in seconds since the UNIX epoch, [=serialize an integer|serialized=]
